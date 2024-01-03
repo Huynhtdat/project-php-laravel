@@ -93,9 +93,11 @@
                 </div>
             </div>
 
-            @include('products.list')
+            <div id="loadProduct">
+                @include('products.list')
+            </div>
 
-            {!! $products->links() !!}
+            {{-- {!! $products->links() !!} --}}
         </div>
     </div>
 @endsection
