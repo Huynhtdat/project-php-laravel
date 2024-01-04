@@ -7,8 +7,8 @@ use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\MainAdminController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SliderController;
-
 use App\Http\Controllers\Admin\CartAdminController;
+
 use App\Http\Controllers\CartController;
 
 // Route::get('/', function () {
@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function() {
             Route::get('add', [MenuController::class, 'create']);
             Route::post('add', [MenuController::class, 'store']);
             Route::get('list', [MenuController::class, 'index']);
-            Route::get('edit/{menu}', [MenuController::class, 'show']);
+            Route::get('edit/{menu}', [MenuController::class, 'edit']);
             Route::post('edit/{menu}', [MenuController::class, 'update']);
             Route::DELETE('destroy', [MenuController::class, 'destroy']);
             Route::get('logout', [MenuController::class, 'logout']);
@@ -68,6 +68,7 @@ Route::middleware(['auth'])->group(function() {
 
 Route::get('/', [MainController::class, 'index']);
 
+#category product type
 Route::get('danh-muc/{id}-{slug}.html', [App\Http\Controllers\MenuController::class, 'index']);
 Route::get('san-pham/{id}-{slug}.html', [App\Http\Controllers\ProductController::class, 'index']);
 

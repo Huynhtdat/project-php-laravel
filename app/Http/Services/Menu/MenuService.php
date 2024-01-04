@@ -84,7 +84,7 @@ class MenuService
     public function getProduct($menu, $request)
     {
         $query = $menu->products()
-            ->select('id', 'name', 'price', 'price_sale')
+            ->select('id', 'name', 'price', 'price_sale', 'file')
             ->where('active', 1);
 
         if ($request->input('price')) {

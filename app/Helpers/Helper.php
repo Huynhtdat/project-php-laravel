@@ -79,6 +79,6 @@ class Helper {
     {
         if ($priceSale != 0) return number_format($priceSale);
         if ($price != 0)  return number_format($price);
-        return '<a href="/lien-he.html">Contact</a>';
+        return '<a href="/contact.html">Contact</a>';
     }
 }

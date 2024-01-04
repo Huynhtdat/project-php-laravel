@@ -39,7 +39,7 @@ class MenuController extends Controller
         ]);
     }
 
-    public function show(Menu $menu){
+    public function edit(Menu $menu){
         return view('admin.menu.edit', [
             'title' => 'Edit Category ' . $menu->name,
             'menu' => $menu,

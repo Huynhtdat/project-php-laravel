@@ -22,7 +22,7 @@
                         @endphp
                         <li class="header-cart-item flex-w flex-t m-b-12">
                             <div class="header-cart-item-img">
-                                <img src="{{ $product->thumb }}" alt="IMG">
+                                <img src="{{ $product->file }}" alt="IMG">
                             </div>
 
                             <div class="header-cart-item-txt p-t-8">

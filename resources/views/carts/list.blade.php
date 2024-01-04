@@ -124,7 +124,7 @@
                                         </div>
 
                                         <div class="bor8 bg0 m-b-12">
-                                            <textarea class="cl8 plh3 size-111 p-lr-15" name="content"></textarea>
+                                            <textarea class="cl8 plh3 size-111 p-lr-15" name="content" placeholder="Content"></textarea>
                                         </div>
 
                                     </div>

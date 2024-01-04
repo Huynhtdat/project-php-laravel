@@ -38,7 +38,7 @@ class SliderController extends Controller
         ]);
     }
 
-    public function show(Slider $slider)
+    public function edit(Slider $slider)
     {
         return view('admin.slider.edit', [
             'title' => 'Edit Slider',

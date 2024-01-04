@@ -5,10 +5,10 @@
         <thead>
         <tr>
             <th style="width: 50px">ID</th>
-            <th>Tên Khách Hàng</th>
-            <th>Số Điện Thoại</th>
+            <th>Name Custommer</th>
+            <th>Phone Number</th>
             <th>Email</th>
-            <th>Ngày Đặt hàng</th>
+            <th>Date</th>
             <th style="width: 100px">&nbsp;</th>
         </tr>
         </thead>

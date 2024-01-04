@@ -3,11 +3,11 @@
 @section('content')
     <div class="customer mt-3">
         <ul>
-            <li>Tên khách hàng: <strong>{{ $customer->name }}</strong></li>
-            <li>Số điện thoại: <strong>{{ $customer->phone }}</strong></li>
-            <li>Địa chỉ: <strong>{{ $customer->address }}</strong></li>
+            <li>Name Custommer: <strong>{{ $customer->name }}</strong></li>
+            <li>Phone Number: <strong>{{ $customer->phone }}</strong></li>
+            <li>Address: <strong>{{ $customer->address }}</strong></li>
             <li>Email: <strong>{{ $customer->email }}</strong></li>
-            <li>Ghi chú: <strong>{{ $customer->content }}</strong></li>
+            <li>Note: <strong>{{ $customer->content }}</strong></li>
         </ul>
     </div>
 
@@ -31,7 +31,11 @@
                 <tr>
                     <td class="column-1">
                         <div class="how-itemcart1">
-                            <img src="{{ $cart->product->thumb }}" alt="IMG" style="width: 100px">
+                            @if($cart->product && $cart->product->file)
+                                <img src="{{ $cart->product->file }}" alt="IMG" style="width: 100px">
+                            @else
+                                <img src="{{ asset('path_to_placeholder_image') }}" alt="Placeholder Image" style="width: 100px">
+                            @endif
                         </div>
                     </td>
                     <td class="column-2">{{ $cart->product->name }}</td>
@@ -41,7 +45,7 @@
                 </tr>
             @endforeach
                 <tr>
-                    <td colspan="4" class="text-right">Tổng Tiền</td>
+                    <td colspan="4" class="text-right">Total price</td>
                     <td>{{ number_format($total, 0, '', '.') }}</td>
                 </tr>
             </tbody>
