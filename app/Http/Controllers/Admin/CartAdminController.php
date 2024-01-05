@@ -18,7 +18,7 @@ class CartAdminController extends Controller
     public function index()
     {
         return view('admin.carts.customer', [
-            'title' => 'Danh Sách Đơn Đặt Hàng',
+            'title' => 'Cart List',
             'customers' => $this->cart->getCustomer()
         ]);
     }
@@ -28,7 +28,7 @@ class CartAdminController extends Controller
         $carts = $this->cart->getProductForCart($customer);
 
         return view('admin.carts.detail', [
-            'title' => 'Chi Tiết Đơn Hàng: ' . $customer->name,
+            'title' => 'Cart Detail: ' . $customer->name,
             'customer' => $customer,
             'carts' => $carts
         ]);
